@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>JQuery Select By Attributes</title>
+<style>
+  .content {
+    background-image: linear-gradient(to top right, #aaa, #ddd 75%);
+    width: 185px;
+  }
+</style>
+</head>
+<body>
+<div class="content">
+  <p style="color: red;">Some content</p>
+  <p>Some more content</p>
+  <p>Some more content</p>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+    <li>Item 6</li>
+    <li>Item 7</li>
+    <li>Item 8</li>
+    <li>Item 9</li>
+    <li>Item 10</li>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+    <li>Item 6</li>
+    <li>Item 7</li>
+    <li>Item 8</li>
+    <li>Item 9</li>
+    <li>Item 10</li>
+  </ul>
+  <img src="3.15.17 858.jpg" />
+  <img src="SolarTruck.png" />
+  <p>Some more content</p>
+  <p>Some more content</p>
+  <p>Some more content</p>
+  <p>Some more content</p>
+</div>
+<script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/JavaScript">
+  // var collection = jQuery('*').filter(function(){
+  //     return !!jQuery(this).css('backgroundImage');
+  // });
+  // collection.addClass('selected');
+
+  // select all div elements with a width between 100px and 200px
+  // var collection = $('div').filter(function() {
+  //   var width = $(this).width();
+  //   return width > 100 && width < 200;
+  // });
+  // collection.addClass('selected');
+
+  //select all images with a common image extension
+  // var collection = $('img').filter(function() {
+  //   return /\.(jpe?g|png|bmp\gif)(\?.+)?$/.test(this.src);
+  // });
+  // collection.addClass('selected');
+
+  // select all elements that have either 10 children or 20 children
+  var collection = $('*').filter(function() {
+    var children = $(this).children().length;
+    return children === 10 || children === 20
+  });
+  collection.addClass('selected');
+</script>
+</body>
+</html>
